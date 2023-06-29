@@ -9,6 +9,27 @@ This section is meant as a refresher if you're new to Franklin.
 Have a look at both how the website renders and the corresponding markdown (`index.md`).
 Modify at will to get a feeling for how things work!
 
+
+\df{1}{
+  Let $x, y \in \R^n$ and let $\scal{\cdot, \cdot}$ denote
+  the usual inner product. Then, the angle $\theta$ between
+  $x$ and $y$ is given by
+  $$ \cos(\theta) = {\scal{x,y}\over \scal{x,x} \scal{y,y}}. $$
+}
+
+\proof{
+不妨设
+
+
+}
+
+\rmk{1}{
+  Let $x, y \in \R^n$ and let $\scal{\cdot, \cdot}$ denote
+  the usual inner product. Then, the angle $\theta$ between
+  $x$ and $y$ is given by
+  $$ \cos(\theta) = {\scal{x,y}\over \scal{x,x} \scal{y,y}}. $$
+}
+
 Ps: if you want to modify the header or footer or the general look of the website, adjust the files in
 * `src/_css/` and
 * `src/_html_parts/`.

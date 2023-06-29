@@ -647,4 +647,33 @@ franklin-toc {
   /* Avoid clickable elements being too close together. */
   margin: 0.6rem 0;
 }
+
+.df {
+  background-color: aliceblue;
+  border-left: 5px solid cornflowerblue;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 1em;
 }
+
+.warn {
+  background-color: rgb(235, 222, 231);
+  border-left: 5px solid rgb(195, 58, 101);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 1em;
+}
+
+.proof {
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 1em;
+}
+
+.franklin-content code { 
+  background-color: rgba(27,31,35,0.05); 
+  padding: 0.1em 0.2em; 
+  border-radius: 2px; 
+  font-size: 90%;
+  }
