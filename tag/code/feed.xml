@@ -9,7 +9,7 @@
 
   <channel>
     <title>
-      <![CDATA[  Franklin Template  ]]>
+      <![CDATA[  晓明的主页  ]]>
     </title>
     <link> https://tlienart.github.io/FranklinTemplates.jl/ </link>
     <description>
@@ -35,7 +35,7 @@
   
   
   <atom:author>
-    <atom:name>Septimia Zenobia</atom:name>
+    <atom:name>xiaoming</atom:name>
   </atom:author>
         
 </item>
@@ -54,7 +54,7 @@
   
   
   <atom:author>
-    <atom:name>Septimia Zenobia</atom:name>
+    <atom:name>xiaoming</atom:name>
   </atom:author>
         
 </item>
