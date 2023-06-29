@@ -1,4 +1,4 @@
-@def title = "Franklin Example"
+@def title = "晓明的主页"
 @def tags = ["syntax", "code"]
 
 # How to use Franklin
