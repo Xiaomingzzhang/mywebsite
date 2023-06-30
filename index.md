@@ -5,6 +5,9 @@
 
 \tableofcontents <!-- you can use \toc as well -->
 
+
+This link [可以吗](/post/2023-06-12-Julia-带有事件的微分方程)
+
 This section is meant as a refresher if you're new to Franklin.
 Have a look at both how the website renders and the corresponding markdown (`index.md`).
 Modify at will to get a feeling for how things work!
@@ -37,6 +40,8 @@ Ps: if you want to modify the header or footer or the general look of the websit
 ## The base with Markdown
 
 The [standard markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be used such as titles using `#`, lists:
+
+This link (/post/Julia-带有事件的微分方程)
 
 * element with **bold**
 * element with _emph_
