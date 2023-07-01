@@ -1,5 +1,6 @@
 @def title = "晓明的主页"
 @def tags = ["syntax", "code"]
+@def hasplotly = true
 
 # How to use Franklin
 
@@ -10,10 +11,45 @@ This link [可以吗](/post/2023-06-12-Julia-带有事件的微分方程)
 
 [文件](/files/椭圆台球的可积性.pdf)
 
+```julia:pyplot1
+using Plots, IntervalArithmetic
+x = range(-2, 2, length=500)
+plot()
+for α in 1:5
+    plot!(x, sinc.(α .* x))
+end
+savefig(joinpath(@OUTPUT, "sinc.svg")) # hide
+```
+
+\fig{sinc}
+
 This section is meant as a refresher if you're new to Franklin.
 Have a look at both how the website renders and the corresponding markdown (`index.md`).
 Modify at will to get a feeling for how things work!
 
+```julia:ex1
+using PlotlyJS
+z =  [10     10.625  12.5  15.625  20
+     5.625  6.25    8.125 11.25   15.625
+     2.5    3.125   5.    8.125   12.5
+     0.625  1.25    3.125 6.25    10.625
+     0      0.625   2.5   5.625   10]
+
+data   = contour(; z=z)
+layout = Layout(; title="Basic Contour Plot")
+plt    = plot(data, layout)
+
+fdplotly(json(plt)) # hide
+```
+\textoutput{ex1}
+
+\note{
+注意到
+}
+
+\warn{
+警告
+}
 
 \df{1}{
   Let $x, y \in \R^n$ and let $\scal{\cdot, \cdot}$ denote
@@ -29,6 +65,13 @@ Modify at will to get a feeling for how things work!
 }
 
 \rmk{1}{
+  Let $x, y \in \R^n$ and let $\scal{\cdot, \cdot}$ denote
+  the usual inner product. Then, the angle $\theta$ between
+  $x$ and $y$ is given by
+  $$ \cos(\theta) = {\scal{x,y}\over \scal{x,x} \scal{y,y}}. $$
+}
+
+\lm{1}{
   Let $x, y \in \R^n$ and let $\scal{\cdot, \cdot}$ denote
   the usual inner product. Then, the angle $\theta$ between
   $x$ and $y$ is given by
