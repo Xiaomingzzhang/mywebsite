@@ -12,7 +12,7 @@ This link [可以吗](/post/2023-06-12-Julia-带有事件的微分方程)
 [文件](/files/椭圆台球的可积性.pdf)
 
 ```julia:pyplot1
-using Plots, IntervalArithmetic
+using Plots
 x = range(-2, 2, length=500)
 plot()
 for α in 1:5
