@@ -23,7 +23,7 @@
 
 cb = ContinuousCallback(condition, affect!, save_positions=(<span class=hljs-literal >false</span>, <span class=hljs-literal >true</span>)) <span class=hljs-comment ># save_positions 第一个问是否保持事件发生前的状态, 第二个问是否保存事件发生后的状态</span>
 
-u0 = [<span class=hljs-number >0.0</span>, <span class=hljs-number >0.5</span>, <span class=hljs-number >0.0</span>, <span class=hljs-number >1.2</span>] <span class=hljs-comment ># 初值</span>
+u0 = [<span class=hljs-number >0.0</span>, <span class=hljs-number >1.0</span>, <span class=hljs-number >0.0</span>, <span class=hljs-number >1.2</span>] <span class=hljs-comment ># 初值</span>
 timespan = (<span class=hljs-number >0.0</span>, <span class=hljs-number >100.0</span>) <span class=hljs-comment ># 积分区间</span>
 prob = ODEProblem(f, u0, timespan) <span class=hljs-comment ># 定义 ODE 方程</span>
 sol = solve(prob, Tsit5(), callback=cb, save_everystep=<span class=hljs-literal >false</span>, save_start=<span class=hljs-literal >false</span>, save_end=<span class=hljs-literal >false</span>) <span class=hljs-comment ># 求解事件的 ODE 方程, 不保存任一个积分点, 这样只有事件发生时的状态得到储存</span>
@@ -35,6 +35,6 @@ sol = solve(prob, Tsit5(), callback=cb, save_everystep=<span class=hljs-literal 
 <span class=hljs-keyword >function</span> para(s)
     [a * cos(s), b * sin(s)]
 <span class=hljs-keyword >end</span>
-plot(first.(sol.u), third.(sol.u), color=:black, axis=([], <span class=hljs-literal >false</span>), legend=<span class=hljs-literal >false</span>) <span class=hljs-comment ># 画出质点轨迹</span>
+Plots.plot(first.(sol.u), third.(sol.u), color=:black, axis=([], <span class=hljs-literal >false</span>), legend=<span class=hljs-literal >false</span>) <span class=hljs-comment ># 画出质点轨迹</span>
 data = para.(<span class=hljs-number >0</span>:<span class=hljs-number >0.01</span>:<span class=hljs-number >2</span><span class=hljs-literal >pi</span>)
-plot!(first.(data), last.(data), color=:black) <span class=hljs-comment ># 再画出椭圆</span></code></pre> <p>如上程序将会产生如下漂亮的图片: <img src="/mywebsite/files/plot_billiard.png" alt="椭圆台球的轨迹" /></p> <!-- <div class=page-foot > Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. </div> --> <div class=footer > Website built with built by <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and <a href="https://julialang.org">Julia</a>. </div></div> </div> </div> </div> <!-- end of class page-wrap--> <script src="/mywebsite/libs/highlight/highlight.min.js"></script> <script>hljs.highlightAll();hljs.configure({tabReplace: ' '});</script>
+Plots.plot!(first.(data), last.(data), color=:black) <span class=hljs-comment ># 再画出椭圆</span></code></pre> <img src="/mywebsite/assets/post/2023-06-12-Julia-带有事件的微分方程/code/output/pp.svg" alt=""> <p>如上程序将会产生如下漂亮的图片: <img src="/mywebsite/files/plot_billiard.png" alt="椭圆台球的轨迹" /></p> <!-- <div class=page-foot > Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. </div> --> <div class=footer > Website built with built by <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and <a href="https://julialang.org">Julia</a>. </div></div> </div> </div> </div> <!-- end of class page-wrap--> <script src="/mywebsite/libs/highlight/highlight.min.js"></script> <script>hljs.highlightAll();hljs.configure({tabReplace: ' '});</script>
