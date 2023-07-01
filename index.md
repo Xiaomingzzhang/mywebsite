@@ -10,7 +10,7 @@ This link [可以吗](/post/2023-06-12-Julia-带有事件的微分方程)
 
 [文件](/files/椭圆台球的可积性.pdf)
 
-```julia:pyplot1
+```julia:./code/pyplot1
 using Plots
 x = range(-2, 2, length=500)
 plot()
@@ -34,9 +34,9 @@ z =  [10     10.625  12.5  15.625  20
      0.625  1.25    3.125 6.25    10.625
      0      0.625   2.5   5.625   10]
 
-data   = contour(; z=z)
-layout = Layout(; title="Basic Contour Plot")
-plt    = plot(data, layout)
+data   = PlotlyJS.contour(; z=z)
+layout = PlotlyJS.Layout(; title="Basic Contour Plot")
+plt    = PlotlyJS.plot(data, layout)
 
 fdplotly(json(plt)) # hide
 ```
