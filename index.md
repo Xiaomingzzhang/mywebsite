@@ -6,7 +6,6 @@
 
 \tableofcontents <!-- you can use \toc as well -->
 
-
 This link [可以吗](/post/2023-06-12-Julia-带有事件的微分方程)
 
 [文件](/files/椭圆台球的可积性.pdf)
