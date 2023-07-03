@@ -86,14 +86,14 @@ Add here global latex commands to use throughout your pages.
 \increment{}
 \recordTheoremNumber{!#2}
 \generateLabel{!#2}
-@@df #1 \bold{\getTheoremNumber{}.} \generateTheoremName{!#3} <!-- newline -->
+@@df #1 **\getTheoremNumber{}.** \generateTheoremName{!#3} <!-- newline -->
 !#4
 @@
 }
 
 \newcommand{\proof}[1]{
 @@proof
-\bold{证明.} #1
+**证明:** #1
 @@
 }
 
