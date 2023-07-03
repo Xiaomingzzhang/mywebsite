@@ -29,7 +29,7 @@ Add here global latex commands to use throughout your pages.
 \newcommand{\note}[1]{@@note @@title ⚠ Note@@ @@content #1 @@ @@}
 \newcommand{\warn}[1]{@@warning @@title ⚠ Warning!@@ @@content #1 @@ @@}
 
-\newcommand{\df}[2]{
+<!-- \newcommand{\df}[2]{
   @@df
   **定义 #1 :** #2
   @@
@@ -63,10 +63,44 @@ Add here global latex commands to use throughout your pages.
   @@warn
   **注 #1 :** #2
   @@
+} -->
+
+
+\newcommand{\chapter}[1]{
+# #1
+\setlevel{chapter} \increment{}
+\setlevel{subsection} \resetcount{} <!-- reset subsection -->
+\setlevel{section} \resetcount{}    <!-- reset section -->
+\setlevel{subsection}
+}
+\newcommand{\section}[1]{
+## #1
+
+\setlevel{section} \increment{}     <!-- increment section -->
+\setlevel{subsection} \resetcount{} <!-- reset subsection -->
+}
+\newcommand{\subsection}[1]{### #1}
+
+<!-- theorem_name, label, title, statement-->
+\newcommand{\theoremcounter}[4]{
+\increment{}
+\recordTheoremNumber{!#2}
+\generateLabel{!#2}
+@@df #1 \bold{\getTheoremNumber{}.} \generateTheoremName{!#3} <!-- newline -->
+!#4
+@@
 }
 
 \newcommand{\proof}[1]{
-  @@proof
-  **证明 :** #1
-  @@
+@@proof
+\bold{证明.} #1
+@@
 }
+
+
+\newcommand{\df}[3]{\theoremcounter{\bold{定义}}{#1}{#2}{#3}}
+\newcommand{\rmk}[3]{\theoremcounter{\bold{注}}{#1}{#2}{#3}}
+\newcommand{\cor}[3]{\theoremcounter{\bold{推论}}{#1}{#2}{#3}}
+\newcommand{\thm}[3]{\theoremcounter{\bold{定理}}{#1}{#2}{#3}}
+\newcommand{\prop}[3]{\theoremcounter{\bold{命题}}{#1}{#2}{#3}}
+\newcommand{\lm}[3]{\theoremcounter{\bold{引理}}{#1}{#2}{#3}}

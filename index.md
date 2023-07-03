@@ -50,12 +50,41 @@ fdplotly(json(plt)) # hide
 警告
 }
 
-\df{1}{
+
+
+Ps: if you want to modify the header or footer or the general look of the website, adjust the files in
+* `src/_css/` and
+* `src/_html_parts/`.
+
+\section{The base with Markdown}
+
+The [standard markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be used such as titles using `#`, lists:
+
+This link (/post/Julia-带有事件的微分方程)
+
+
+\df{test}{}{
   Let $x, y \in \R^n$ and let $\scal{\cdot, \cdot}$ denote
   the usual inner product. Then, the angle $\theta$ between
   $x$ and $y$ is given by
   $$ \cos(\theta) = {\scal{x,y}\over \scal{x,x} \scal{y,y}}. $$
 }
+
+\df{test2}{}{
+  Let $x, y \in \R^n$ and let $\scal{\cdot, \cdot}$ denote
+  the usual inner product. Then, the angle $\theta$ between
+  $x$ and $y$ is given by
+  $$ \cos(\theta) = {\scal{x,y}\over \scal{x,x} \scal{y,y}}. $$
+}
+
+\rmk{rmk}{}{
+  Let $x, y \in \R^n$ and let $\scal{\cdot, \cdot}$ denote
+  the usual inner product. Then, the angle $\theta$ between
+  $x$ and $y$ is given by
+  $$ \cos(\theta) = {\scal{x,y}\over \scal{x,x} \scal{y,y}}. $$
+}
+
+\ref{test}
 
 \proof{
 不妨设
@@ -63,29 +92,19 @@ fdplotly(json(plt)) # hide
 
 }
 
-\rmk{1}{
+\rmk{1}{}{
   Let $x, y \in \R^n$ and let $\scal{\cdot, \cdot}$ denote
   the usual inner product. Then, the angle $\theta$ between
   $x$ and $y$ is given by
   $$ \cos(\theta) = {\scal{x,y}\over \scal{x,x} \scal{y,y}}. $$
 }
 
-\lm{1}{
+\lm{2}{}{
   Let $x, y \in \R^n$ and let $\scal{\cdot, \cdot}$ denote
   the usual inner product. Then, the angle $\theta$ between
   $x$ and $y$ is given by
   $$ \cos(\theta) = {\scal{x,y}\over \scal{x,x} \scal{y,y}}. $$
 }
-
-Ps: if you want to modify the header or footer or the general look of the website, adjust the files in
-* `src/_css/` and
-* `src/_html_parts/`.
-
-## The base with Markdown
-
-The [standard markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be used such as titles using `#`, lists:
-
-This link (/post/Julia-带有事件的微分方程)
 
 * element with **bold**
 * element with _emph_
