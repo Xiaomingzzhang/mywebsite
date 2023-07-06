@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  Julia-带有事件的微分方程  ]]>
+  </title>
+  <link> https://tlienart.github.io/FranklinTemplates.jl/post/2023-06-12-Julia-带有事件的微分方程/index.html </link>
+  <guid> https://tlienart.github.io/FranklinTemplates.jl/post/2023-06-12-Julia-带有事件的微分方程/index.html </guid>
+  <description>
+    <![CDATA[  Programming is boring art  ]]>
+  </description>  
+    
+  <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>xiaoming</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  More goodies  ]]>
   </title>
   <link> https://tlienart.github.io/FranklinTemplates.jl/menu2/index.html </link>
