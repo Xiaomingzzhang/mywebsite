@@ -702,6 +702,16 @@ franklin-toc {
   margin-bottom: 1em;
 }
 
+.date {
+  background-color: aliceblue;
+  font-size: 80%;
+  width: 18%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 1em;
+  color: #0e39b0;
+}
+
 .warn {
   background-color: rgb(235, 222, 231);
   border-left: 5px solid rgb(195, 58, 101);

@@ -28,7 +28,11 @@ Add here global latex commands to use throughout your pages.
 
 \newcommand{\note}[1]{@@note @@title ⚠ Note@@ @@content #1 @@ @@}
 \newcommand{\warn}[1]{@@warning @@title ⚠ Warning!@@ @@content #1 @@ @@}
-
+\newcommand{\date}[1]
+{@@date
+  #1
+@@
+}
 <!-- \newcommand{\df}[2]{
   @@df
   **定义 #1 :** #2
