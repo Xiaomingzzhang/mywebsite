@@ -1,7 +1,19 @@
 <!--
 Add here global page variables to use throughout your website.
 -->
-@def website_title = "晓明的主页"
++++
+# RSS parameters
+generate_rss = true
+website_title = "晓明的主页"
+website_descr = "Official website for the Julia programming language."
+website_url = get(ENV, "JULIA_FRANKLIN_WEBSITE_URL", "https://julialang.org/")
+prepath = "mywebsite"
+author = "xiaoming"
+mintoclevel = 2
+hasplotly = false
++++
+
+<!-- @def website_title = "晓明的主页"
 @def website_descr = "Example website using Franklin"
 @def website_url   = "https://tlienart.github.io/FranklinTemplates.jl/"
 
@@ -11,7 +23,7 @@ Add here global page variables to use throughout your website.
 
 @def mintoclevel = 2
 
-@def hasplotly = false
+@def hasplotly = false -->
 
 <!--
 Add here files or directories that should be ignored by Franklin, otherwise
