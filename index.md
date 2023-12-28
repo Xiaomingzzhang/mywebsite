@@ -56,7 +56,7 @@ Ps: if you want to modify the header or footer or the general look of the websit
 * `src/_css/` and
 * `src/_html_parts/`.
 
-\section{The base with Markdown}
+## The base with Markdown
 
 The [standard markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be used such as titles using `#`, lists:
 

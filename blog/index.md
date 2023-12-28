@@ -12,7 +12,7 @@
 }
 
 .grid > h2, .grid > p {
-  background: #f2f2f2;
+  background: aliceblue;
   padding: 0.5rem 0.5rem 1rem 0.5rem;
   font-size: 0.9em;
   line-height: 1.1rem;
