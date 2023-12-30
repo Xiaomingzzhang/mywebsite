@@ -98,12 +98,8 @@ Add here global latex commands to use throughout your pages.
 \newcommand{\subsection}[1]{### #1}
 
 <!-- theorem_name, label, title, statement-->
-\newcommand{\theoremcounter}[4]{
-\increment{}
-\recordTheoremNumber{!#2}
-\generateLabel{!#2}
-@@df #1 **\getTheoremNumber{}.** \generateTheoremName{!#3} <!-- newline -->
-!#4
+\newcommand{\theoremcounter}[3]{
+@@df  #1 \bold{!#2.}  #3
 @@
 }
 
@@ -114,9 +110,9 @@ Add here global latex commands to use throughout your pages.
 }
 
 
-\newcommand{\df}[3]{\theoremcounter{\bold{定义}}{#1}{#2}{#3}}
-\newcommand{\rmk}[3]{\theoremcounter{\bold{注}}{#1}{#2}{#3}}
-\newcommand{\cor}[3]{\theoremcounter{\bold{推论}}{#1}{#2}{#3}}
-\newcommand{\thm}[3]{\theoremcounter{\bold{定理}}{#1}{#2}{#3}}
-\newcommand{\prop}[3]{\theoremcounter{\bold{命题}}{#1}{#2}{#3}}
-\newcommand{\lm}[3]{\theoremcounter{\bold{引理}}{#1}{#2}{#3}}
+\newcommand{\df}[2]{\theoremcounter{\bold{定义}}{#1}{#2}}
+\newcommand{\rmk}[2]{\theoremcounter{\bold{注}}{#1}{#2}}
+\newcommand{\cor}[2]{\theoremcounter{\bold{推论}}{#1}{#2}}
+\newcommand{\thm}[2]{\theoremcounter{\bold{定理}}{#1}{#2}}
+\newcommand{\prop}[2]{\theoremcounter{\bold{命题}}{#1}{#2}}
+\newcommand{\lm}[2]{\theoremcounter{\bold{引理}}{#1}{#2}}
