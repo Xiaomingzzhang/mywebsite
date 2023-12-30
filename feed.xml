@@ -23,29 +23,10 @@
 
 <item>
   <title>
-    <![CDATA[  如何用 100 行代码得到一个 Fillippov 系统的求解器  ]]>
-  </title>
-  <link> https://julialang.org/blog/2023/08/Fillippov/index.html </link>
-  <guid> https://julialang.org/blog/2023/08/Fillippov/index.html </guid>
-  <description>
-    <![CDATA[  PSA: Thread-local state is no longer recommended; Common misconceptions about threadid&#40;&#41; and nthreads&#40;&#41;  ]]>
-  </description>  
-    
-  <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>xiaoming</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  基解矩阵及其性质  ]]>
   </title>
-  <link> https://julialang.org/blog/2023/07/基解矩阵及其性质/index.html </link>
-  <guid> https://julialang.org/blog/2023/07/基解矩阵及其性质/index.html </guid>
+  <link> https://julialang.org/blog/基解矩阵及其性质/index.html </link>
+  <guid> https://julialang.org/blog/基解矩阵及其性质/index.html </guid>
   <description>
     <![CDATA[  PSA: Thread-local state is no longer recommended; Common misconceptions about threadid&#40;&#41; and nthreads&#40;&#41;  ]]>
   </description>  
@@ -63,8 +44,8 @@
   <title>
     <![CDATA[  刚体在引力场下的运动微分方程  ]]>
   </title>
-  <link> https://julialang.org/blog/2023/07/2023-07-04-刚体在引力场下的运动微分方程/index.html </link>
-  <guid> https://julialang.org/blog/2023/07/2023-07-04-刚体在引力场下的运动微分方程/index.html </guid>
+  <link> https://julialang.org/blog/2023-07-04-刚体在引力场下的运动微分方程/index.html </link>
+  <guid> https://julialang.org/blog/2023-07-04-刚体在引力场下的运动微分方程/index.html </guid>
   <description>
     <![CDATA[  PSA: Thread-local state is no longer recommended; Common misconceptions about threadid&#40;&#41; and nthreads&#40;&#41;  ]]>
   </description>  
@@ -120,8 +101,8 @@
   <title>
     <![CDATA[  More goodies  ]]>
   </title>
-  <link> https://julialang.org/menu2/index.html </link>
-  <guid> https://julialang.org/menu2/index.html </guid>
+  <link> https://julialang.org/About me/index.html </link>
+  <guid> https://julialang.org/About me/index.html </guid>
   <description>
     <![CDATA[  A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg" alt="" />  ]]>
   </description>  
