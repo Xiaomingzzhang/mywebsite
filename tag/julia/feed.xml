@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss">
+
+  <channel>
+    <title>
+      <![CDATA[  晓明的主页  ]]>
+    </title>
+    <link> https://julialang.org/ </link>
+    <description>
+      <![CDATA[  Official website for the Julia programming language.  ]]>
+    </description>
+    <atom:link
+      href="https://julialang.org/feed.xml"
+      rel="self"
+      type="application/rss+xml" />
+
+
+<item>
+  <title>
+    <![CDATA[  辛扭转映射的 KAM 迭代算法  ]]>
+  </title>
+  <link> https://julialang.org/blog/2023/06/2023-06-18-辛扭转映射的KAM迭代算法/index.html </link>
+  <guid> https://julialang.org/blog/2023/06/2023-06-18-辛扭转映射的KAM迭代算法/index.html </guid>
+  <description>
+    <![CDATA[  PSA: Thread-local state is no longer recommended; Common misconceptions about threadid&#40;&#41; and nthreads&#40;&#41;  ]]>
+  </description>  
+    
+  <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>xiaoming</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Julia-带有事件的微分方程  ]]>
+  </title>
+  <link> https://julialang.org/blog/2023/06/2023-06-12-Julia-带有事件的微分方程/index.html </link>
+  <guid> https://julialang.org/blog/2023/06/2023-06-12-Julia-带有事件的微分方程/index.html </guid>
+  <description>
+    <![CDATA[  PSA: Thread-local state is no longer recommended; Common misconceptions about threadid&#40;&#41; and nthreads&#40;&#41;  ]]>
+  </description>  
+    
+  <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>xiaoming</atom:name>
+  </atom:author>
+        
+</item>
+</channel></rss>
