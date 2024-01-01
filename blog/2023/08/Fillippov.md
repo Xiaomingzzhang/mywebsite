@@ -51,7 +51,7 @@ $$\nabla H(x)\cdot F_1(x)<0\ \text{且}\ \nabla H(x)\cdot F_2(x)>0.$$
 
 下图解释了上述数学定义:
 
-![椭圆台球的轨迹](/files/Fillippov-fig1.jpg)
+![椭圆台球的轨迹](/files/Fillippov-fig1.png)
 
 现在我们已经解决了第一个问题, 下面我们来看第二个问题. 我们这样定义在 $H(x)=0$ 处的矢量场, 令
 
