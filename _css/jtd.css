@@ -571,11 +571,11 @@ td {
 }
 
 .franklin-content blockquote {
-  background: lemonchiffon;
-  border-left: 7px solid #a8a8a8;
+  background: hsl(252, 79%, 93%);
+  border-left: 7px solid #7253ED;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
-  font-style: italic;
+  font-style: italic smaller;
 }
 
 .franklin-content blockquote p {
