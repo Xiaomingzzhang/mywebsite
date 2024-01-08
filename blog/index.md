@@ -46,7 +46,10 @@
 - [Euler Disk](/files/Euler%20Disk.pdf)
 
 # $\LaTeX$ 笔记
+
+- [扭转映射](/files/TwistMaps.pdf)
 - [刚体动力学](/files/rigid-body-dynamics1.pdf)
+
 
 
 
