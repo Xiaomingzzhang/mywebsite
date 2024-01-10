@@ -646,6 +646,8 @@ td {
   padding-left: 20%;
 }
 
+.franklin-toc ol > li > ol {list-style-type: lower-alpha;}
+.franklin-toc ol > li > ol > li > ol {list-style-type: lower-roman;}
 
 /* ==================================================================
     KATEX
