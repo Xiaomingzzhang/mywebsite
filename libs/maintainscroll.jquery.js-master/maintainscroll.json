@@ -1,0 +1,33 @@
+{
+    "name": "maintainscroll",
+    "title": "Maintain Scroll JS Util",
+    "description": "Maintain & keep scroll position after post-back & postback & refresh. Just include the js file (no need for cookies)",
+    "keywords": [
+        "scroll",
+        "scrolling"
+    ],
+    "version": "0.1.1",
+    "author": {
+        "name": "Evalds Urtans",
+        "url": "http://evalds.lv"
+    },
+    "maintainers": [
+        {
+            "name": "Evalds Urtans",
+            "email": "evalds.urtans@gmail.com",
+            "url": "http://evalds.lv"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/jquery/jquery-color/blob/2.1.2/MIT-LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/evaldsurtans/maintainscroll.jquery.js/issues",
+    "homepage": "https://github.com/evaldsurtans/maintainscroll.jquery.js",
+    "docs": "https://github.com/evaldsurtans/maintainscroll.jquery.js",
+    "download": "http://code.jquery.com/#maintainscroll",
+    "dependencies": {
+    }
+}
