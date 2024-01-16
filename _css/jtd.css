@@ -657,16 +657,25 @@ body { counter-reset: eqnum; }
 
 .katex { font-size: 1em !important; }
 
-.katex-display .katex {
-  display: inline-block;
-} /* overwrite katex settings */
+.katex-display .katex{
+  display: inline-flex;
+}
 
 .katex-display::after {
   counter-increment: eqnum;
   content: "(" counter(eqnum) ")";
   position: relative;
   float: right;
+  position: relative;
+  display: block;
+  float: right;
+  top: 50%;
   padding-right: 5px;
+}
+
+.nonumber .katex-display::after {
+  counter-increment: nothing;
+  content: "";
 }
 
 /* ==================================================================

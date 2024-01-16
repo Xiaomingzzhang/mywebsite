@@ -4,7 +4,7 @@
 # Cool Stuff:
 
 ### Euler 盘:
-~~~<a href="/preparing">
+~~~<a href="/blog/2023/12/Euler Disk 与刚体运动的可视化">
     <img src="/files/eulerdisk.gif" alt="描述图片内容">
 </a>~~~
 ### 椭圆台球周期轨道:
