@@ -48,13 +48,13 @@ Euler 盘是一个很有意思的教学玩具, 它大概在上世纪九十年代
 - 当 $oxyz$ 中的矢量进行平移时无关紧要, 那么我们就不区分 $\hat{o}\hat{x}\hat{y}\hat{z}$ 与 $oxyz$; 例如, 根据上面的约定, 对于 约束反力 $f$ 在 $OXYZ$ 中的投影 $F$, 我们有 $F=A_t^{-1}f$. 
 
 \note{
-我们由刚体动力学的知识知道, $\hat{o}\hat{x}\hat{y}\hat{z}$ 中的矢量 $\hat{p}$ 的导数满足:
+我们由刚体动力学的知识知道, $\hat{o}\hat{x}\hat{y}\hat{z}$ 中的矢量如果在刚体坐标系中是静止的, 那么 $\hat{p}$ 的导数满足:
 
 $$
 \dot{\hat{p}}=[\omega,\hat{p}].
 $$
 
-这个方程在 $OXYZ$ 中也有类似的表示:
+一般地, 对于 $\hat{p}=A_t P$, 我们有:
 
 $$
 \frac{d}{dt}A_tP=A_t[\Omega,P]+A_t\dot{P}.
@@ -162,7 +162,7 @@ $$
 
 利用上面的公式, 就可以用 Euler 角表示 $\hat{\gamma}$. 因此, 如果要求得 $\hat{\gamma}$ 关于 Euler 角的显式表达式, 我们一般有两种方式, 第一种是直接利用几何关系求得 $\hat{\gamma}$, 对于形状比较简单的刚体, 这是有可能实现的; 第二种即是先求 $\Gamma(N)$, 再利用方程 \eqref{gG} 算出 $\hat{\gamma}$.
 
-下面我们给出三个例子, 用来解释如何计算这些函数.
+下面我们给出三个例子, 有兴趣的读者可以尝试计算我们所给出的公式.
 
 \subsection{Euler 盘}
 假设 Euler 盘在 $OXYZ$ 中是这样的圆柱体: 
@@ -204,9 +204,9 @@ f(\xi,\eta)=((R+r\cos\eta)\cos\xi,(R+r\cos\eta)\sin\xi,\sin\eta),
 $$
 }
 
-其中 $R>r$, $\xi$ 表示
+其中 $R>r$.
 
-那么经过符号计算我们有
+那么我们有
 
 $$
 \hat{\gamma}=\left(
@@ -226,21 +226,96 @@ $$
 
 实际上, Mathematica 已经有了非常丰富的函数来处理刚体, 比如函数 `MomentOfInertia` 可以直接符号求得几何区域的惯量张量, 函数 `EulerMatrix` 可以生成以任意方式定义的 Euler 角类的旋转所产生的旋转矩阵.
 
-首先定义基本的物理量:
+这里我们给出如何计算并可视化轮胎面的滚动. 首先定义基本的物理量并给出方程:
 ```mma
-MixedProduct[a_, b_, c_] := Det[{a, b, c}];
-At = EulerMatrix[{\[Phi][t], \[Theta][t], \[Psi][t]}, {3, 1, 
-    3}];(*Euler旋转矩阵*)
+At = EulerMatrix[{phi[t], theta[t], psi[t]}, {3, 1, 3}];(*Euler旋转矩阵*)
 II = {{i1, 0, 0}, {0, i1, 0}, {0, 0, i3}};(*惯性张量*)
-\[CapitalOmega] = {\[Phi]'[
-      t] Sin[\[Theta][t]] Sin[\[Psi][t]] + \[Theta]'[
-      t] Cos[\[Psi][t]], \[Phi]'[
-      t] Sin[\[Theta][t]] Cos[\[Psi][t]] - \[Theta]'[
-      t] Sin[\[Psi][t]], \[Phi]'[t] Cos[\[Theta][t]] + \[Psi]'[t]};
-\[Omega] = At . \[CapitalOmega] // Simplify;
-\[Gamma] = {Cos[\[Theta][t]] Sin[\[Phi][
-      t]], -Cos[\[Theta][t]] Cos[\[Phi][t]], -Sin[\[Theta][t]]};
+Omega = {phi'[t] Sin[theta[t]] Sin[psi[t]] + theta'[t] Cos[psi[t]], 
+   phi'[t] Sin[theta[t]] Cos[psi[t]] - theta'[t] Sin[psi[t]], 
+   phi'[t] Cos[theta[t]] + psi'[t]};
+omega = At . Omega // Simplify;
+gamma = {R Cos[theta[t]] Sin[phi[t]], -R Cos[theta[t]] Cos[
+     phi[t]], -r - R Sin[theta[t]]};
+pp[{theta_, 
+    phi_}] := {R Cos[theta] Sin[phi], -R Cos[theta] Cos[phi], -r - 
+    R Sin[theta]};
+n = {0, 0, 1};
+preeq = At . (Cross[Omega, II . Omega] + II . D[Omega, t]) - 
+   Cross[gamma, m g n - m D[Cross[omega, gamma], t]];
 ```
+我们想要使得质心的初始速度为 0, 为此可以符号求解一下角速度应该满足的关系:
+```mma
+Clear[R, r]; Quiet@
+ Solve[-Cross[omega, gamma] == {0, 0, 0}, {phi'[t], theta'[t], 
+   psi'[t]}]
+```
+我们得到:
+```mma
+{{Derivative[1][phi][
+    t] -> -(((R Cos[theta[t]] + r Tan[theta[t]] + 
+       R Sin[theta[t]] Tan[theta[t]]) Derivative[1][psi][t])/R), 
+  Derivative[1][theta][t] -> 0}}
+```
+
+下面给出具体参数, 并给出初值, 数值求解微分方程:
+```mma
+i1 = 1; i3 = 10; R = 2; r = 1;
+m = 20; g = 10;
+eqgen[f_] := Table[f[[i]] == 0, {i, 1, Length@f}];
+eq = eqgen[preeq];
+mydphi[theta_, 
+   dpsi_] := -(((R Cos[theta] + r Tan[theta] + 
+      R Sin[theta] Tan[theta]) dpsi)/R);
+phi0 = Pi/4; theta0 = Pi/4; psi0 = 
+ Pi/4; dtheta0 = 0; dpsi0 = 1.2; dphi0 = mydphi[theta0, dpsi0];
+initials = {phi[0] == phi0, theta[0] == theta0, psi[0] == psi0, 
+   theta'[0] == dtheta0, phi'[0] == dphi0, psi'[0] == dpsi0};
+(*Euler 角满足的方程求解*)
+sol = NDSolve[Join[eq, initials], {phi, theta, psi}, {t, 0, 100}, 
+    SolveDelayed -> True][[1]];
+(*质心运动方程求解*)
+sol2 = NDSolve[{q'[t] == -Cross[omega, gamma] /. sol, 
+     q[0] == {0, 0, 0}}, q, {t, 0, 100}][[1]];
+```
+最后可视化:
+```mma
+floor = (gamma /. sol /. t -> 10) + ((q[t]) /. sol2 /. 
+     t -> 10);(*盘所在的平面*)
+rotate[t_] = EulerMatrix[{phi[t], theta[t], psi[t]}, {3, 1, 3}] /. sol;
+translate[t_] = q[t] /. sol2;
+contact[t_] := (pp[{theta[t], phi[t]}] /. sol) + ((q[t]) /. sol2);
+R = 2; r = 1;
+f[a_, b_] := {(R + r Cos[b]) Cos[a], (R + r Cos[b]) Sin[a], 
+   r Sin[b]};
+fig = ParametricPlot3D[f[u, v], {u, 0, 2 Pi}, {v, 0, 2 Pi}, 
+   PlotStyle -> 
+    Directive[Specularity[White, 30], 
+     Texture[ExampleData[{"ColorTexture", "StoneWall"}]]], 
+   Lighting -> "Standard", Mesh -> None, PlotRange -> All];
+Animate[Show[
+  fig /. 
+   GraphicsComplex[x___] :> 
+    GeometricTransformation[
+     GeometricTransformation[GraphicsComplex[x], rotate[t]], 
+     TranslationTransform[translate[t]]], 
+  Graphics3D[{LightPink, InfinitePlane[floor, {{1, 0, 0}, {0, 1, 0}}],
+     Red, PointSize[0.02], Point[contact[t]]}], 
+  PlotRange -> {{-8, 8}, {-8, 8}, {-4, 4}}, 
+  ImageSize -> {400, 400}], {t, 0, 50}]
+```
+由于 Gitee 不支持视频播放及预览, 读者可以点击[这里](https://gitee.com/mingwebsite/mingwebsite/raw/master/files/torus_roll.mp4)下载视频.
+
+
+最后我们画出接触点的轨迹:
+
+```mma
+ParametricPlot[contact[t][[1 ;; 2]], {t, 0, 100}, PlotPoints -> 2000, 
+ PlotStyle -> {Black}, Axes -> False, Frame -> True, 
+ LabelStyle -> 
+  Directive[Black, {FontFamily -> "Times New Roman", 18}]]
+```
+![接触点轨迹](/files/contanct.png)
+
 
 
 
