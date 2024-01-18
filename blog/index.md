@@ -1,5 +1,4 @@
 @def title = "博客"
-@def tags = ["syntax", "code"]
 
 # 我的一些博客
 
@@ -50,8 +49,11 @@
 - [扭转映射](/files/TwistMaps.pdf)
 - [刚体动力学](/files/rigid-body-dynamics1.pdf)
 
+# 标签
 
-
+* page with tag [`算法`](/tag/算法/)
+* page with tag [`Julia`](/tag/julia/)
+* page with tag [`Mathematica`](/tag/mathematica/)
 
 
 
