@@ -303,7 +303,7 @@ Animate[Show[
   PlotRange -> {{-8, 8}, {-8, 8}, {-4, 4}}, 
   ImageSize -> {400, 400}], {t, 0, 50}]
 ```
-由于 Gitee 不支持视频播放及预览, 读者可以点击[这里](https://gitee.com/mingwebsite/mingwebsite/raw/master/files/torus_roll.mp4)下载视频.
+由于 Gitee 不支持视频播放及预览, 读者可以点击[这里](/files/torus_roll.mp4)下载视频.
 
 
 最后我们画出接触点的轨迹:
