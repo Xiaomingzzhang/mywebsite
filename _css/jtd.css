@@ -6,7 +6,7 @@ https://github.com/pmarsceill/just-the-docs/blob/master/LICENSE.txt
 */
 
 html {
-  font-family: sans-serif;
+  font-family: "STHeiti", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 15px;
@@ -22,8 +22,9 @@ body {
   margin: 0;
   position: relative;
   padding-bottom: 4rem;
-  font-family: -apple-system, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
+  font-family: -apple-system, "STHeiti","helvetica neue","Arial", sans-serif, helvetica, roboto, noto, "segoe ui", arial, sans-serif;
   font-size: inherit;
+  letter-spacing: 0.7px;
   line-height: 1.5;
   background-color: #fff;
 }
