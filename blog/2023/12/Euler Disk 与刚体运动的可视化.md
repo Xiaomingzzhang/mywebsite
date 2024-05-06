@@ -5,6 +5,7 @@ mintoclevel = 2
 maxtoclevel = 3
 title = "Euler Disk 与刚体的纯滚动"
 published = "31 December 2023"
+rss = """Euler Disk 与刚体的纯滚动"""
 +++
 @def tags = ["刚体动力学", "可视化", "Mathematica"]
 @def code = "Mathematica"

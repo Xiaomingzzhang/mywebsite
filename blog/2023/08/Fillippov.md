@@ -9,6 +9,7 @@ mintoclevel = 2
 maxtoclevel = 3
 title = "如何用 100 行代码得到一个 Fillippov 系统的求解器"
 published = "21 August 2023"
+rss = """如何用 100 行代码得到一个 Fillippov 系统的求解器"""
 +++
 @def tags = ["Julia", "Fillippov 系统"]
 # 如何用 100 行代码得到一个 Fillippov 系统的求解器
