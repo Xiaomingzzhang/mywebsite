@@ -23,34 +23,15 @@
 
 <item>
   <title>
-    <![CDATA[  Euler Disk 与刚体的纯滚动  ]]>
+    <![CDATA[  如何用 100 行代码得到一个 Fillippov 系统的求解器  ]]>
   </title>
-  <link> https://julialang.org/blog/2023/12/Euler Disk 与刚体运动的可视化/index.html </link>
-  <guid> https://julialang.org/blog/2023/12/Euler Disk 与刚体运动的可视化/index.html </guid>
+  <link> https://julialang.org/blog/2023/08/Fillippov/index.html </link>
+  <guid> https://julialang.org/blog/2023/08/Fillippov/index.html </guid>
   <description>
-    <![CDATA[  Euler Disk 与刚体的纯滚动  ]]>
+    <![CDATA[  如何用 100 行代码得到一个 Fillippov 系统的求解器  ]]>
   </description>  
     
   <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>xiaoming</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  辛扭转映射的 KAM 迭代算法  ]]>
-  </title>
-  <link> https://julialang.org/blog/2023/06/2023-06-18-辛扭转映射的KAM迭代算法/index.html </link>
-  <guid> https://julialang.org/blog/2023/06/2023-06-18-辛扭转映射的KAM迭代算法/index.html </guid>
-  <description>
-    <![CDATA[  辛扭转映射的 KAM 迭代算法  ]]>
-  </description>  
-    
-  <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>  
   
   
   <atom:author>

@@ -23,6 +23,44 @@
 
 <item>
   <title>
+    <![CDATA[  如何用 100 行代码得到一个 Fillippov 系统的求解器  ]]>
+  </title>
+  <link> https://julialang.org/blog/2023/08/Fillippov/index.html </link>
+  <guid> https://julialang.org/blog/2023/08/Fillippov/index.html </guid>
+  <description>
+    <![CDATA[  如何用 100 行代码得到一个 Fillippov 系统的求解器  ]]>
+  </description>  
+    
+  <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>xiaoming</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Euler Disk 与刚体的纯滚动  ]]>
+  </title>
+  <link> https://julialang.org/blog/2023/12/Euler Disk 与刚体运动的可视化/index.html </link>
+  <guid> https://julialang.org/blog/2023/12/Euler Disk 与刚体运动的可视化/index.html </guid>
+  <description>
+    <![CDATA[  Euler Disk 与刚体的纯滚动  ]]>
+  </description>  
+    
+  <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>xiaoming</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  基解矩阵及其性质  ]]>
   </title>
   <link> https://julialang.org/blog/基解矩阵及其性质/index.html </link>
@@ -47,10 +85,29 @@
   <link> https://julialang.org/blog/2023-07-04-刚体在引力场下的运动微分方程/index.html </link>
   <guid> https://julialang.org/blog/2023-07-04-刚体在引力场下的运动微分方程/index.html </guid>
   <description>
-    <![CDATA[  PSA: Thread-local state is no longer recommended; Common misconceptions about threadid&#40;&#41; and nthreads&#40;&#41;  ]]>
+    <![CDATA[  刚体在引力场下的运动微分方程  ]]>
   </description>  
     
   <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>xiaoming</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  基解矩阵及其性质: 光谓与分段光滑情形  ]]>
+  </title>
+  <link> https://julialang.org/blog/2024/03/基解矩阵及其性质/index.html </link>
+  <guid> https://julialang.org/blog/2024/03/基解矩阵及其性质/index.html </guid>
+  <description>
+    <![CDATA[  基解矩阵及其性质: 光谓与分段光滑情形  ]]>
+  </description>  
+    
+  <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -66,7 +123,7 @@
   <link> https://julialang.org/blog/2023/06/2023-06-18-辛扭转映射的KAM迭代算法/index.html </link>
   <guid> https://julialang.org/blog/2023/06/2023-06-18-辛扭转映射的KAM迭代算法/index.html </guid>
   <description>
-    <![CDATA[  PSA: Thread-local state is no longer recommended; Common misconceptions about threadid&#40;&#41; and nthreads&#40;&#41;  ]]>
+    <![CDATA[  辛扭转映射的 KAM 迭代算法  ]]>
   </description>  
     
   <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>  
@@ -85,7 +142,7 @@
   <link> https://julialang.org/blog/2023/06/2023-06-12-Julia-带有事件的微分方程/index.html </link>
   <guid> https://julialang.org/blog/2023/06/2023-06-12-Julia-带有事件的微分方程/index.html </guid>
   <description>
-    <![CDATA[  PSA: Thread-local state is no longer recommended; Common misconceptions about threadid&#40;&#41; and nthreads&#40;&#41;  ]]>
+    <![CDATA[  Julia-带有事件的微分方程  ]]>
   </description>  
     
   <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>  

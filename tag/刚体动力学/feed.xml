@@ -39,23 +39,4 @@
   </atom:author>
         
 </item>
-
-<item>
-  <title>
-    <![CDATA[  辛扭转映射的 KAM 迭代算法  ]]>
-  </title>
-  <link> https://julialang.org/blog/2023/06/2023-06-18-辛扭转映射的KAM迭代算法/index.html </link>
-  <guid> https://julialang.org/blog/2023/06/2023-06-18-辛扭转映射的KAM迭代算法/index.html </guid>
-  <description>
-    <![CDATA[  辛扭转映射的 KAM 迭代算法  ]]>
-  </description>  
-    
-  <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>xiaoming</atom:name>
-  </atom:author>
-        
-</item>
 </channel></rss>

@@ -28,7 +28,7 @@
   <link> https://julialang.org/blog/2023/06/2023-06-12-Julia-带有事件的微分方程/index.html </link>
   <guid> https://julialang.org/blog/2023/06/2023-06-12-Julia-带有事件的微分方程/index.html </guid>
   <description>
-    <![CDATA[  PSA: Thread-local state is no longer recommended; Common misconceptions about threadid&#40;&#41; and nthreads&#40;&#41;  ]]>
+    <![CDATA[  Julia-带有事件的微分方程  ]]>
   </description>  
     
   <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>  
